@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "KTM_WebTM", ".", "{96ED2C8B-A8A3-478B-9FB3-0A54972FDB88}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_1046"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\OneDrive\Máy tính\KTM_WebTM\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1046\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_1046"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\OneDrive\Máy tính\KTM_WebTM\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1046\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1046"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96ED2C8B-A8A3-478B-9FB3-0A54972FDB88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96ED2C8B-A8A3-478B-9FB3-0A54972FDB88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B8C270B-BFCC-493E-A612-F4F7145A3DC5}
+	EndGlobalSection
+EndGlobal

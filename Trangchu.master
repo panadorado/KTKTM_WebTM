@@ -1,0 +1,149 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Trangchu.master.cs" Inherits="Trangchu" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Tin tuc Viet Nam</title>
+</head>
+<body style="font-size: 12pt; background-color: seashell;">
+    <form id="form1" runat="server">
+    <div>
+        <div style="text-align: center">
+            <table style="width: 760px" border="1">
+                <tr>
+                    <td colspan="3" style="background-image: url(App_Themes/Banner.jpg); height: 120px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: right; height: 24px;">
+                        <div style="background-color: #3399cc; text-align: right">
+                            <div style="text-align: right">
+                                <span style="color: #ffffff"><strong>
+                                    <div style="text-align: center">
+                                        <table style="width: 100%">
+                                            <tr>
+                                                <td width="77%">
+                                                    <marquee>Copyright &copy; <%: DateTime.Now.Year %> - Website tin tức</marquee></td>
+                                                <td align="center" style="width: 100px">
+                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Dang_Nhap.aspx" Font-Bold="True" ForeColor="Yellow">Đăng nhập</asp:HyperLink></td>
+                                                <td align="center" style="width: 100px">
+                                            <asp:HyperLink ID="HyperLink4" runat="server" Font-Bold="True" ForeColor="Yellow"
+                                                NavigateUrl="~/Dang_Ky.aspx">Đăng ký</asp:HyperLink></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </strong></span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="20%" style="text-align: left">
+                        <div style="text-align: left">
+                            <table style="width: 100%">
+                                <tr>
+                                    <td style="width: 103px; height: 187px; background-color: #003399; text-align: left;" valign="top">
+                                        <asp:DataList ID="DataList1" runat="server" DataKeyField="Group_ID" DataSourceID="SqlDataSource1">
+                                            <ItemTemplate>
+                                                <table style="width: 100%">
+                                                    <tr>
+                                                        <td style="width: 100px">
+                                                            <asp:Image ID="Image1" runat="server" ImageUrl="~/App_Themes/here.gif" />&nbsp;
+                                                            <asp:HyperLink ID="HyperLink1" runat="server" Font-Bold="True" ForeColor="#FFFFFF"
+                                                                NavigateUrl='<%# "Nhomtintuc.aspx?Group_ID="+Eval("Group_ID") %>' Text='<%# Eval("Title") %>'
+                                                                Width="153px"></asp:HyperLink></td>
+                                                    </tr>
+                                                </table>
+                                            </ItemTemplate>
+                                        </asp:DataList><asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+                                            SelectCommand="SELECT * FROM [Tb_GroupNews]"></asp:SqlDataSource>
+                                        </td>
+                                </tr>
+                                <tr>
+                                    <td height="23" style="width: 103px; background-color: #003399; text-align: left"
+                                        valign="top">
+                                        &nbsp;<asp:Image ID="Image7" runat="server" ImageUrl="~/App_Themes/here.gif" />&nbsp;
+                                        <asp:HyperLink ID="HyperLink6" runat="server" Font-Bold="True" Font-Size="12pt" ForeColor="White"
+                                            NavigateUrl="~/Timkiem.aspx">Tìm kiếm</asp:HyperLink></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div style="text-align: left">
+                            <hr />
+                            <table>
+                                <tr>
+                                    <td style="background-image: url(App_Themes/CMC_020108_LLL.gif); width: 135px; height: 200px">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div style="text-align: left">
+                            <table style="width: 141px; height: 204px">
+                                <tr>
+                                    <td style="background-image: url(App_Themes/BIDV_901_LLL.gif); width: 100px">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div style="text-align: left">
+                        </div>
+                    </td>
+                    <td valign="top" style="width: 60%">
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+            &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:contentplaceholder>
+                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                    </td>
+                    <td style="width: 20%; text-align: right;" valign="top">
+                        <div style="text-align: center">
+                        </div>
+                        <div style="text-align: center">
+                            <table style="width: 100%">
+                                <tr>
+                                    <td style="height: 23px; background-color: #0099cc; text-align: left" width="100%">
+                                        <asp:Image ID="Image4" runat="server" ImageUrl="~/Pictures/arrow.gif" />
+                                        <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="White" Text="Sự kiện trong ngày"></asp:Label></td>
+                                </tr>
+                                <tr>
+                                    <td style="height: 177px; text-align: left; width: 100%;" width="100%">
+                                        <asp:DataList ID="DataList2" runat="server" DataKeyField="New_ID" DataSourceID="SqlDataSource2">
+                                            <ItemTemplate>
+                                                <div style="text-align: center">
+                                                    <table style="width: 100%">
+                                                        <tr>
+                                                            <td style="width: 100%; text-align: justify">
+                                                                <asp:Image ID="Image2" runat="server" ImageUrl="~/App_Themes/Chi_tiet.gif" />
+                                                                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%# "Chitiet.aspx?Group_ID="+Eval("Group_ID")+"&New_ID="+Eval("New_ID") %>'
+                                                                    Text='<%# Eval("Title_News") %>'></asp:HyperLink></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </ItemTemplate>
+                                        </asp:DataList><asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+                                            SelectCommand="SELECT * FROM [Tb_DetailNews] WHERE ([Group_ID] = @Group_ID) ORDER BY [Creatdate] DESC">
+                                            <SelectParameters>
+                                                <asp:Parameter DefaultValue="2" Name="Group_ID" />
+                                            </SelectParameters>
+                                        </asp:SqlDataSource>
+                                        &nbsp;&nbsp;
+                                    </td>
+                                </tr>
+                            </table>
+                            <hr />
+                        <asp:Image ID="Image6" runat="server" ImageUrl="~/App_Themes/Incombank_LLL_0303.gif" />&nbsp;
+                            <br />
+                        <asp:Image ID="Image5" runat="server" ImageUrl="~/App_Themes/QuangMobile_LLL_1003.gif" /></div>
+                        </td>
+                </tr>
+                <tr>
+                    <td colspan="3" height="80" style="background-color: #ccffff">
+                        <strong>
+                            <p>Copyright &copy; <%: DateTime.Now.Year %> - Website tin tức</p>
+                        </strong></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
